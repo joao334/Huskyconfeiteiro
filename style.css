@@ -248,12 +248,17 @@ header {
   width: 54px;
   height: 54px;
   border-radius: 18px;
+  overflow: hidden;
   background: var(--cream);
   display: grid;
   place-items: center;
-  color: var(--blue-800);
-  font-size: 1.35rem;
   box-shadow: var(--shadow-soft);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .brand-text strong {
@@ -1052,4 +1057,14 @@ footer {
 
 .gallery-actions-bottom {
   margin-top: 26px;
+}
+
+
+.instagram-open-btn {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.instagram-post-link {
+  display: block;
 }
