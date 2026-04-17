@@ -22,6 +22,15 @@ if (menuToggle && siteNav) {
   });
 }
 
+const currentPage = document.body.dataset.page;
+if (currentPage) {
+  document.querySelectorAll('[data-page-link]').forEach((link) => {
+    if (link.dataset.pageLink === currentPage) {
+      link.classList.add('active');
+    }
+  });
+}
+
 const whatsappNumber = '5511988456865';
 const nameInput = document.getElementById('name');
 const whatsappInput = document.getElementById('whatsapp');
@@ -46,8 +55,7 @@ function updateWhatsAppContactLink() {
     detailsInput?.value && `Detalhes: ${detailsInput.value}`,
   ].filter(Boolean);
 
-  const message = lines.join('\n');
-  whatsContactBtn.href = buildWhatsAppUrl(message);
+  whatsContactBtn.href = buildWhatsAppUrl(lines.join('\n'));
 }
 
 [nameInput, whatsappInput, orderTypeInput, dateInput, detailsInput].forEach((field) => {
