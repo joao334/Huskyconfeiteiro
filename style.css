@@ -1025,3 +1025,31 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+.btn-small {
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 0.9rem;
+  margin-top: 14px;
+}
+
+.instagram-post-link {
+  display: block;
+}
+
+.instagram-post-link img {
+  transition: transform 0.25s ease;
+}
+
+.instagram-post:hover .instagram-post-link img {
+  transform: scale(1.03);
+}
+
+.gallery-actions-top {
+  margin: 0 0 22px;
+}
+
+.gallery-actions-bottom {
+  margin-top: 26px;
+}
