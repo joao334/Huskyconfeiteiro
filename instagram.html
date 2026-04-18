@@ -4,32 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Husky Confeiteiro | Instagram</title>
-  <meta name="description" content="Posts oficiais do Instagram da Husky Confeiteiro." />
+  <meta name="description" content="Acompanhe o Instagram oficial da Husky Confeiteiro e veja as postagens em destaque." />
+  <meta name="theme-color" content="#13273f" />
+  <meta property="og:title" content="Husky Confeiteiro | Instagram" />
+  <meta property="og:description" content="Acompanhe o Instagram oficial da Husky Confeiteiro e veja as postagens em destaque." />
+  <meta property="og:image" content="galeria/hero-produto.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="galeria/mascote-identidade.jpg" />
 </head>
 <body data-page="instagram">
-  <div class="page-bg">
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
     <div class="pattern"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
     <div class="paw paw-1"><span></span></div>
     <div class="paw paw-2"><span></span></div>
     <div class="paw paw-3"><span></span></div>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/5511988456865?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">
-    💬 Pedir no WhatsApp
+    <span>💬</span>
+    Pedir pelo WhatsApp
   </a>
 
-  <header>
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <div class="brand-mark"><img src="galeria/mascote-identidade.jpg" alt="Logo Husky Confeiteiro" /></div>
+      <a href="index.html" class="brand" aria-label="Ir para a página inicial da Husky Confeiteiro">
+        <div class="brand-mark">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+        </div>
         <div class="brand-text">
           <strong>Husky Confeiteiro</strong>
-          <span>Confeitaria artesanal</span>
+          <span>Confeitaria artesanal com identidade própria</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav" id="siteNav">
         <a href="index.html" data-page-link="inicio">Início</a>
         <a href="cardapio.html" data-page-link="cardapio">Cardápio</a>
@@ -41,130 +59,108 @@
   </header>
 
   <main class="page-shell">
-    <div class="container">
-      <section class="instagram-real-layout">
-        <article class="glass-card instagram-real-side">
-          <div class="instagram-real-profile">
-            <img class="instagram-real-avatar" src="galeria/mascote-identidade.jpg" alt="Imagem da Husky Confeiteiro" />
-            <div>
-              <div class="eyebrow">Instagram oficial</div>
-              <h1>@huskyconfeiteiro</h1>
-              <p>
-                Nesta página entram apenas links oficiais do próprio perfil da Husky.
-                Os cards abaixo abrem as publicações reais do Instagram.
-              </p>
-            </div>
-          </div>
 
-          <div class="button-row">
-            <a class="btn btn-primary" href="https://www.instagram.com/huskyconfeiteiro/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">Abrir perfil oficial</a>
-            <a class="btn btn-secondary" href="contato.html">Pedir agora</a>
-          </div>
-
-          <div class="pill-list">
-            <span>Somente @huskyconfeiteiro</span>
-            <span>Posts oficiais</span>
-            <span>Links reais</span>
-          </div>
-
-          <div class="instagram-note-box">
-            <strong>Importante</strong>
+    <section class="container page-hero reveal">
+      <div class="instagram-page-hero glass-panel">
+        <div class="instagram-profile-card">
+          <img class="profile-avatar" src="galeria/mascote-identidade.jpg" alt="Foto de perfil da Husky Confeiteiro" />
+          <div>
+            <span class="eyebrow-chip">instagram oficial</span>
+            <h1>@huskyconfeiteiro</h1>
             <p>
-              Para mostrar a imagem real do post, a forma mais estável é abrir a publicação oficial do Instagram.
-              Alguns navegadores bloqueiam o carregamento automático do embed quando o HTML é aberto localmente.
+              Uma página dedicada para fortalecer o perfil da marca e levar o cliente direto para o Instagram oficial.
             </p>
           </div>
-        </article>
+        </div>
+        <div class="instagram-page-actions">
+          <a class="btn btn-primary" href="https://www.instagram.com/huskyconfeiteiro/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">Abrir perfil</a>
+          <button class="btn btn-secondary" type="button" id="copyInstagramBtn" data-copy-text="@huskyconfeiteiro">Copiar @</button>
+        </div>
+      </div>
+    </section>
 
-        <section class="glass-card instagram-real-feed">
-          <div class="section-title instagram-section-title">
-            <div class="eyebrow">Publicações oficiais</div>
-            <h2>Posts do @huskyconfeiteiro</h2>
-            <p>Todos os botões abaixo abrem posts do próprio perfil da Husky Confeiteiro.</p>
+    <section class="container section-spacing reveal">
+      <div class="section-header left-limit">
+        <span class="eyebrow">postagens em destaque</span>
+        <h2>Um atalho bonito para o conteúdo oficial da marca.</h2>
+      </div>
+
+      <div class="instagram-post-grid">
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DMoM57KuNoA/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="produtos/lambe-lambe.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>Meu nome é Ana Carolina e eu sou a confeiteira por trás da Husky</h3>
+            <p>Post institucional da marca com presença e identidade.</p>
+            <strong>Ver post oficial</strong>
           </div>
+        </a>
 
-          <div class="instagram-link-grid">
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DMoM57KuNoA/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-1">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>Sabe aquele momento que pede um doce?</strong>
-                <p>Bolos de pote da Husky.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
-
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DXEsjxmDnqh/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-2">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>Se você gosta de brigadeiro…</strong>
-                <p>Post oficial da Husky.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
-
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DXHiGODEdrK/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-3">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>Você me pergunta sobre a minha paixão…</strong>
-                <p>Bolos no pote e brownies.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
-
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DVWCdtWEVT4/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-4">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>Tem cheiro de carinho, gosto de infância…</strong>
-                <p>Post oficial da Husky.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
-
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DVmvlGHDYpk/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-5">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>No início nada é fácil…</strong>
-                <p>História e gratidão.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
-
-            <a class="instagram-link-card" href="https://www.instagram.com/p/DUgH__xjnkA/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
-              <div class="instagram-link-thumb instagram-link-thumb-6">
-                <span>Instagram</span>
-              </div>
-              <div class="instagram-link-body">
-                <strong>Ser confeiteira é cansativo!!</strong>
-                <p>Bastidores da rotina.</p>
-                <span class="instagram-link-cta">Abrir postagem oficial</span>
-              </div>
-            </a>
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DXEsjxmDnqh/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="produtos/uivo-prestigio.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>Se você gosta de brigadeiro…</h3>
+            <p>Conteúdo voltado para desejo e conexão com o produto.</p>
+            <strong>Ver post oficial</strong>
           </div>
-        </section>
-      </section>
-    </div>
+        </a>
+
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DXHiGODEdrK/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="produtos/pata-crocante.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>Você me pergunta sobre a minha paixão…</h3>
+            <p>Post com foco na personalidade da marca e na confeitaria.</p>
+            <strong>Ver post oficial</strong>
+          </div>
+        </a>
+
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DVWCdtWEVT4/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="galeria/campanha-semana.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>Tem cheiro de carinho, gosto de infância…</h3>
+            <p>Publicação com apelo emocional e identidade afetiva.</p>
+            <strong>Ver post oficial</strong>
+          </div>
+        </a>
+
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DVmvlGHDYpk/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="galeria/bastidores-producao.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>No início nada é fácil…</h3>
+            <p>Post de história, caminhada e conexão humana com a marca.</p>
+            <strong>Ver post oficial</strong>
+          </div>
+        </a>
+
+        <a class="instagram-post-card soft-card" href="https://www.instagram.com/p/DUgH__xjnkA/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
+          <div class="instagram-post-card__image"><img src="galeria/hero-produto.jpg" alt="Post oficial da Husky Confeiteiro" /></div>
+          <div class="instagram-post-card__content">
+            <span class="post-label">Instagram</span>
+            <h3>Ser confeiteira é cansativo!!</h3>
+            <p>Bastidores reais para gerar proximidade e reforçar a dedicação por trás dos pedidos.</p>
+            <strong>Ver post oficial</strong>
+          </div>
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="container glass-card footer-inner">
-      <div class="footer-brand">
-        <strong>Husky Confeiteiro</strong>
-        <span>Siga e acompanhe: @huskyconfeiteiro</span>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <div class="footer-title">Husky Confeiteiro</div>
+        <p class="footer-text">Um site com presença de marca, visual premium e caminho direto para o cliente fechar pedido.</p>
       </div>
-      <div class="footer-nav">
+      <div class="footer-links">
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
         <a href="galeria.html">Galeria</a>
+        <a href="instagram.html">Instagram</a>
         <a href="contato.html">Contato</a>
       </div>
     </div>

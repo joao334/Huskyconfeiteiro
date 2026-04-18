@@ -5,31 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Husky Confeiteiro | Galeria</title>
   <meta name="description" content="Veja a galeria da Husky Confeiteiro com produtos, bastidores e identidade visual da marca." />
+  <meta name="theme-color" content="#13273f" />
+  <meta property="og:title" content="Husky Confeiteiro | Galeria" />
+  <meta property="og:description" content="Veja a galeria da Husky Confeiteiro com produtos, bastidores e identidade visual da marca." />
+  <meta property="og:image" content="galeria/hero-produto.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="galeria/mascote-identidade.jpg" />
 </head>
 <body data-page="galeria">
-  <div class="page-bg">
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
     <div class="pattern"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
     <div class="paw paw-1"><span></span></div>
     <div class="paw paw-2"><span></span></div>
     <div class="paw paw-3"><span></span></div>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/5511988456865?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">
-    💬 Pedir no WhatsApp
+    <span>💬</span>
+    Pedir pelo WhatsApp
   </a>
 
-  <header>
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <div class="brand-mark"><img src="galeria/mascote-identidade.jpg" alt="Logo Husky Confeiteiro" /></div>
+      <a href="index.html" class="brand" aria-label="Ir para a página inicial da Husky Confeiteiro">
+        <div class="brand-mark">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+        </div>
         <div class="brand-text">
           <strong>Husky Confeiteiro</strong>
-          <span>Confeitaria artesanal</span>
+          <span>Confeitaria artesanal com identidade própria</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav" id="siteNav">
         <a href="index.html" data-page-link="inicio">Início</a>
         <a href="cardapio.html" data-page-link="cardapio">Cardápio</a>
@@ -41,80 +59,75 @@
   </header>
 
   <main class="page-shell">
-    <div class="container">
-      <section class="glass-card window">
-        <div class="section-title">
-          <div class="eyebrow">Galeria</div>
-          <h1>Imagens que vendem antes da primeira mensagem.</h1>
-          <p>
-            Uma área separada para destacar produtos, bastidores e a identidade visual da Husky Confeiteiro.
-          </p>
+
+    <section class="container page-hero reveal">
+      <div class="page-hero-card glass-panel gallery-hero-card">
+        <div>
+          <span class="eyebrow-chip">galeria visual</span>
+          <h1>Imagens que encantam antes da primeira colherada.</h1>
+          <p>Essa área ficou mais forte para funcionar como vitrine da marca, apoiar vendas e deixar o site mais bonito.</p>
         </div>
+        <a class="btn btn-secondary" href="contato.html">Quero pedir</a>
+      </div>
+    </section>
 
-        <div class="gallery-grid">
-          <article class="gallery-card large">
-            <div class="gallery-frame">
-              <img src="galeria/hero-produto.jpg" alt="Produto em destaque da Husky Confeiteiro" />
-              <div class="gallery-overlay">
-                <strong>Destaque do produto</strong>
-                <span>Imagem principal para campanhas, lançamentos e posts chamativos.</span>
-              </div>
-            </div>
-          </article>
+    <section class="container section-spacing reveal">
+      <div class="gallery-masonry">
+        <button class="gallery-tile xl" type="button" data-lightbox-image="galeria/hero-produto.jpg" data-lightbox-title="Produto em destaque" data-lightbox-text="Imagem principal para chamar atenção e valorizar lançamentos.">
+          <img src="galeria/hero-produto.jpg" alt="Produto em destaque da Husky Confeiteiro" />
+          <span class="tile-overlay"><strong>Produto em destaque</strong><small>clique para ampliar</small></span>
+        </button>
 
-          <article class="gallery-card tall">
-            <div class="gallery-frame">
-              <img src="galeria/bastidores-producao.jpg" alt="Bastidores da produção Husky Confeiteiro" />
-              <div class="gallery-overlay">
-                <strong>Bastidores</strong>
-                <span>Conteúdo ideal para mostrar cuidado, produção e capricho.</span>
-              </div>
-            </div>
-          </article>
+        <button class="gallery-tile tall" type="button" data-lightbox-image="galeria/bastidores-producao.jpg" data-lightbox-title="Bastidores da produção" data-lightbox-text="Conteúdo que aproxima o cliente e transmite cuidado.">
+          <img src="galeria/bastidores-producao.jpg" alt="Bastidores da produção" />
+          <span class="tile-overlay"><strong>Bastidores</strong><small>clique para ampliar</small></span>
+        </button>
 
-          <article class="gallery-card medium">
-            <div class="gallery-frame">
-              <img src="galeria/campanha-semana.jpg" alt="Campanha da semana da Husky Confeiteiro" />
-              <div class="gallery-overlay">
-                <strong>Campanhas</strong>
-                <span>Espaço para novidades e promoções visuais.</span>
-              </div>
-            </div>
-          </article>
+        <button class="gallery-tile medium" type="button" data-lightbox-image="campanhas/sabor-da-semana.jpg" data-lightbox-title="Sabor da semana" data-lightbox-text="Ótimo espaço para divulgar sabores em evidência e campanhas.">
+          <img src="campanhas/sabor-da-semana.jpg" alt="Sabor da semana" />
+          <span class="tile-overlay"><strong>Sabor da semana</strong><small>clique para ampliar</small></span>
+        </button>
 
-          <article class="gallery-card medium">
-            <div class="gallery-frame">
-              <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
-              <div class="gallery-overlay">
-                <strong>Identidade da marca</strong>
-                <span>O mascote reforça o estilo fofo e memorável da confeitaria.</span>
-              </div>
-            </div>
-          </article>
+        <button class="gallery-tile medium" type="button" data-lightbox-image="galeria/campanha-semana.jpg" data-lightbox-title="Campanha visual" data-lightbox-text="Imagem com cara de divulgação para reforçar promoções e novidades.">
+          <img src="galeria/campanha-semana.jpg" alt="Campanha visual da semana" />
+          <span class="tile-overlay"><strong>Campanhas</strong><small>clique para ampliar</small></span>
+        </button>
 
-          <article class="gallery-card medium">
-            <div class="gallery-frame">
-              <img src="campanhas/sabor-da-semana.jpg" alt="Sabor da semana Husky Confeiteiro" />
-              <div class="gallery-overlay">
-                <strong>Sabor da semana</strong>
-                <span>Área visual para chamar atenção em datas e promoções.</span>
-              </div>
-            </div>
-          </article>
+        <button class="gallery-tile medium" type="button" data-lightbox-image="galeria/mascote-identidade.jpg" data-lightbox-title="Mascote e identidade" data-lightbox-text="O mascote deixa a marca memorável e ajuda a fortalecer a comunicação visual.">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+          <span class="tile-overlay"><strong>Identidade da marca</strong><small>clique para ampliar</small></span>
+        </button>
+
+        <button class="gallery-tile wide" type="button" data-lightbox-image="hero/sabor-da-semana.jpg" data-lightbox-title="Imagem de campanha" data-lightbox-text="Perfeita para usar em destaques, banners e publicações chamativas.">
+          <img src="hero/sabor-da-semana.jpg" alt="Imagem de campanha da Husky Confeiteiro" />
+          <span class="tile-overlay"><strong>Visual para divulgação</strong><small>clique para ampliar</small></span>
+        </button>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Fechar visualização">×</button>
+      <div class="lightbox-dialog">
+        <img id="lightboxImage" src="" alt="" />
+        <div class="lightbox-copy">
+          <strong id="lightboxTitle"></strong>
+          <p id="lightboxText"></p>
         </div>
-      </section>
+      </div>
     </div>
+
   </main>
 
-  <footer>
-    <div class="container glass-card footer-inner">
-      <div class="footer-brand">
-        <strong>Husky Confeiteiro</strong>
-        <span>Galeria pronta para valorizar a marca.</span>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <div class="footer-title">Husky Confeiteiro</div>
+        <p class="footer-text">Um site com presença de marca, visual premium e caminho direto para o cliente fechar pedido.</p>
       </div>
-      <div class="footer-nav">
+      <div class="footer-links">
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
+        <a href="galeria.html">Galeria</a>
         <a href="instagram.html">Instagram</a>
         <a href="contato.html">Contato</a>
       </div>

@@ -5,31 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Husky Confeiteiro | Cardápio</title>
   <meta name="description" content="Conheça o cardápio da Husky Confeiteiro e peça seus sabores favoritos pelo WhatsApp." />
+  <meta name="theme-color" content="#13273f" />
+  <meta property="og:title" content="Husky Confeiteiro | Cardápio" />
+  <meta property="og:description" content="Conheça o cardápio da Husky Confeiteiro e peça seus sabores favoritos pelo WhatsApp." />
+  <meta property="og:image" content="galeria/hero-produto.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="galeria/mascote-identidade.jpg" />
 </head>
 <body data-page="cardapio">
-  <div class="page-bg">
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
     <div class="pattern"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
     <div class="paw paw-1"><span></span></div>
     <div class="paw paw-2"><span></span></div>
     <div class="paw paw-3"><span></span></div>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/5511988456865?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">
-    💬 Pedir no WhatsApp
+    <span>💬</span>
+    Pedir pelo WhatsApp
   </a>
 
-  <header>
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <div class="brand-mark"><img src="galeria/mascote-identidade.jpg" alt="Logo Husky Confeiteiro" /></div>
+      <a href="index.html" class="brand" aria-label="Ir para a página inicial da Husky Confeiteiro">
+        <div class="brand-mark">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+        </div>
         <div class="brand-text">
           <strong>Husky Confeiteiro</strong>
-          <span>Confeitaria artesanal</span>
+          <span>Confeitaria artesanal com identidade própria</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav" id="siteNav">
         <a href="index.html" data-page-link="inicio">Início</a>
         <a href="cardapio.html" data-page-link="cardapio">Cardápio</a>
@@ -41,117 +59,163 @@
   </header>
 
   <main class="page-shell">
-    <div class="container">
-      <section class="glass-card window">
-        <div class="section-title">
-          <div class="eyebrow">Cardápio</div>
-          <h1>Escolha seu sabor favorito.</h1>
+
+    <section class="container page-hero reveal">
+      <div class="page-hero-card glass-panel">
+        <div>
+          <span class="eyebrow-chip">cardápio oficial</span>
+          <h1>Um cardápio que vende com mais elegância.</h1>
           <p>
-            Uma página focada no que interessa: produto, descrição, preço e botão de pedido.
+            Aqui o cliente encontra os sabores com visual bonito, descrições melhores e um caminho claro para pedir.
           </p>
         </div>
-
-        <div class="menu-grid">
-          <article class="menu-card">
-            <div class="menu-image">
-              <img src="produtos/lambe-lambe.jpg" alt="Lambe-Lambe de Brigadeiro" />
-              <div class="menu-tag">Mais pedido</div>
-            </div>
-            <div class="menu-content">
-              <h3>Lambe-Lambe de Brigadeiro</h3>
-              <p>Camadas de bolo de chocolate com brigadeiro cremoso e finalização intensa de chocolate.</p>
-              <div class="menu-pills">
-                <span>Tamanho individual</span>
-                <span>Visual premium</span>
-              </div>
-              <div class="menu-footer">
-                <div class="menu-price">
-                  <span>Preço</span>
-                  <strong>R$18,00</strong>
-                </div>
-                <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Lambe-Lambe%20de%20Brigadeiro%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-image">
-              <img src="produtos/uivo-prestigio.jpg" alt="Uivo do Prestígio" />
-              <div class="menu-tag">Clássico da casa</div>
-            </div>
-            <div class="menu-content">
-              <h3>Uivo do Prestígio</h3>
-              <p>Chocolate com recheio de coco cremoso em camadas generosas para quem ama contraste e textura.</p>
-              <div class="menu-pills">
-                <span>Tamanho individual</span>
-                <span>Queridinho da marca</span>
-              </div>
-              <div class="menu-footer">
-                <div class="menu-price">
-                  <span>Preço</span>
-                  <strong>R$18,00</strong>
-                </div>
-                <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Uivo%20do%20Prestígio%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-image">
-              <img src="produtos/abana-rabo.jpg" alt="Abana-Rabo" />
-              <div class="menu-tag">Sabor especial</div>
-            </div>
-            <div class="menu-content">
-              <h3>Abana-Rabo</h3>
-              <p>Brigadeiro com creme de maracujá para um equilíbrio marcante entre doce e azedinho.</p>
-              <div class="menu-pills">
-                <span>Tamanho individual</span>
-                <span>Doce com toque cítrico</span>
-              </div>
-              <div class="menu-footer">
-                <div class="menu-price">
-                  <span>Preço</span>
-                  <strong>R$18,00</strong>
-                </div>
-                <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Abana-Rabo%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-image">
-              <img src="produtos/pata-crocante.jpg" alt="Pata Crocante" />
-              <div class="menu-tag">Queridinho do Insta</div>
-            </div>
-            <div class="menu-content">
-              <h3>Pata Crocante</h3>
-              <p>Creme de leite ninho com crocância de Oreo em um pote bonito, cremoso e viciante.</p>
-              <div class="menu-pills">
-                <span>Tamanho individual</span>
-                <span>Cremoso e crocante</span>
-              </div>
-              <div class="menu-footer">
-                <div class="menu-price">
-                  <span>Preço</span>
-                  <strong>R$18,00</strong>
-                </div>
-                <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Pata%20Crocante%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
-              </div>
-            </div>
-          </article>
+        <div class="hero-side-note">
+          <strong>Atalho rápido</strong>
+          <p>Todos os produtos levam direto para o WhatsApp da Husky Confeiteiro.</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="filter-bar soft-card">
+        <button class="filter-chip active" type="button" data-filter="all">Todos</button>
+        <button class="filter-chip" type="button" data-filter="chocolate">Chocolate</button>
+        <button class="filter-chip" type="button" data-filter="coco">Coco</button>
+        <button class="filter-chip" type="button" data-filter="frutado">Frutado</button>
+        <button class="filter-chip" type="button" data-filter="crocante">Crocante</button>
+      </div>
+
+      <div class="menu-premium-grid">
+        <article class="menu-premium-card soft-card reveal" data-category="chocolate">
+          <div class="menu-premium-image">
+            <img src="produtos/lambe-lambe.jpg" alt="Lambe-Lambe de Brigadeiro" />
+            <span class="menu-badge">mais pedido</span>
+          </div>
+          <div class="menu-premium-content">
+            <div>
+              <h2>Lambe-Lambe de Brigadeiro</h2>
+              <p>Camadas de bolo de chocolate com brigadeiro cremoso e finalização intensa, com aquele visual que vende na hora.</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Chocolate intenso</span>
+              <span class="tag">Individual</span>
+              <span class="tag">Visual premium</span>
+            </div>
+            <div class="menu-bottom-row">
+              <div class="price-block">
+                <span>Preço</span>
+                <strong>R$ 18,00</strong>
+              </div>
+              <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Lambe-Lambe%20de%20Brigadeiro%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir agora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-premium-card soft-card reveal" data-category="chocolate coco">
+          <div class="menu-premium-image">
+            <img src="produtos/uivo-prestigio.jpg" alt="Uivo do Prestígio" />
+            <span class="menu-badge">clássico da casa</span>
+          </div>
+          <div class="menu-premium-content">
+            <div>
+              <h2>Uivo do Prestígio</h2>
+              <p>Chocolate com recheio de coco cremoso em camadas marcantes, perfeito para quem gosta de um clássico com personalidade.</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Chocolate com coco</span>
+              <span class="tag">Individual</span>
+              <span class="tag">Muito pedido</span>
+            </div>
+            <div class="menu-bottom-row">
+              <div class="price-block">
+                <span>Preço</span>
+                <strong>R$ 18,00</strong>
+              </div>
+              <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Uivo%20do%20Prestígio%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir agora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-premium-card soft-card reveal" data-category="frutado chocolate">
+          <div class="menu-premium-image">
+            <img src="produtos/abana-rabo.jpg" alt="Abana-Rabo" />
+            <span class="menu-badge">sabor especial</span>
+          </div>
+          <div class="menu-premium-content">
+            <div>
+              <h2>Abana-Rabo</h2>
+              <p>Brigadeiro com creme de maracujá para equilibrar doçura e acidez, deixando o pote mais marcante e diferente.</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Toque cítrico</span>
+              <span class="tag">Individual</span>
+              <span class="tag">Criativo</span>
+            </div>
+            <div class="menu-bottom-row">
+              <div class="price-block">
+                <span>Preço</span>
+                <strong>R$ 18,00</strong>
+              </div>
+              <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Abana-Rabo%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir agora</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-premium-card soft-card reveal" data-category="crocante">
+          <div class="menu-premium-image">
+            <img src="produtos/pata-crocante.jpg" alt="Pata Crocante" />
+            <span class="menu-badge">queridinho do insta</span>
+          </div>
+          <div class="menu-premium-content">
+            <div>
+              <h2>Pata Crocante</h2>
+              <p>Creme com leite ninho e crocância de Oreo em uma combinação bonita, cremosa e com ótimo apelo visual.</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Cremoso</span>
+              <span class="tag">Crocante</span>
+              <span class="tag">Individual</span>
+            </div>
+            <div class="menu-bottom-row">
+              <div class="price-block">
+                <span>Preço</span>
+                <strong>R$ 18,00</strong>
+              </div>
+              <a class="btn btn-primary" href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Pata%20Crocante%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir agora</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="info-band">
+        <article class="soft-card info-band__card">
+          <h3>Pedido simples</h3>
+          <p>Escolha seu sabor, clique em pedir e já converse direto pelo WhatsApp.</p>
+        </article>
+        <article class="soft-card info-band__card">
+          <h3>Marca mais valorizada</h3>
+          <p>As fotos e o layout ajudam o cliente a perceber mais valor no seu produto.</p>
+        </article>
+        <article class="soft-card info-band__card">
+          <h3>Pronto para compartilhar</h3>
+          <p>Agora essa página já pode ser enviada como vitrine oficial para clientes.</p>
+        </article>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="container glass-card footer-inner">
-      <div class="footer-brand">
-        <strong>Husky Confeiteiro</strong>
-        <span>Peça pelo WhatsApp e personalize seu pedido.</span>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <div class="footer-title">Husky Confeiteiro</div>
+        <p class="footer-text">Um site com presença de marca, visual premium e caminho direto para o cliente fechar pedido.</p>
       </div>
-      <div class="footer-nav">
+      <div class="footer-links">
         <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
         <a href="galeria.html">Galeria</a>
         <a href="instagram.html">Instagram</a>
         <a href="contato.html">Contato</a>

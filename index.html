@@ -3,34 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Husky Confeiteiro | Início</title>
-  <meta name="description" content="Husky Confeiteiro: bolos de pote artesanais, sabores autorais e pedidos rápidos pelo WhatsApp." />
+  <title>Husky Confeiteiro | Site oficial</title>
+  <meta name="description" content="Bolos de pote artesanais, apresentação marcante e pedidos rápidos pelo WhatsApp." />
+  <meta name="theme-color" content="#13273f" />
+  <meta property="og:title" content="Husky Confeiteiro | Site oficial" />
+  <meta property="og:description" content="Bolos de pote artesanais, apresentação marcante e pedidos rápidos pelo WhatsApp." />
+  <meta property="og:image" content="galeria/hero-produto.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/jpeg" href="galeria/mascote-identidade.jpg" />
 </head>
 <body data-page="inicio">
-  <div class="page-bg">
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
     <div class="pattern"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
     <div class="paw paw-1"><span></span></div>
     <div class="paw paw-2"><span></span></div>
     <div class="paw paw-3"><span></span></div>
   </div>
 
   <a class="whatsapp-float" href="https://wa.me/5511988456865?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">
-    💬 Pedir no WhatsApp
+    <span>💬</span>
+    Pedir pelo WhatsApp
   </a>
 
-  <header>
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <div class="brand-mark"><img src="galeria/mascote-identidade.jpg" alt="Logo Husky Confeiteiro" /></div>
+      <a href="index.html" class="brand" aria-label="Ir para a página inicial da Husky Confeiteiro">
+        <div class="brand-mark">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+        </div>
         <div class="brand-text">
           <strong>Husky Confeiteiro</strong>
-          <span>Confeitaria artesanal</span>
+          <span>Confeitaria artesanal com identidade própria</span>
         </div>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
 
       <nav class="nav" id="siteNav">
         <a href="index.html" data-page-link="inicio">Início</a>
@@ -43,119 +59,213 @@
   </header>
 
   <main class="page-shell">
-    <div class="container">
-      <section class="glass-card window hero-grid">
+
+    <section class="hero-section container reveal">
+      <div class="hero-card hero-home">
         <div class="hero-copy">
-          <div class="badge">✨ Site organizado por páginas</div>
-          <div class="section-title" style="margin-top:18px; margin-bottom:0;">
-            <h1>Doces que encantam no visual e conquistam na primeira colherada.</h1>
-            <p>
-              A Husky Confeiteiro agora fica mais direta para o cliente: navegação separada por janelas,
-              cardápio limpo, galeria visual, página do Instagram e contato rápido para pedidos.
-            </p>
-          </div>
+          <span class="eyebrow-chip">feito para impressionar no visual e no sabor</span>
+          <h1>Um site com cara de marca forte, doce bonito e atendimento que converte.</h1>
+          <p>
+            A Husky Confeiteiro agora tem uma presença digital mais elegante, charmosa e profissional.
+            O cliente entende rápido a proposta da marca, visualiza os produtos e já encontra o caminho para pedir.
+          </p>
 
-          <div class="hero-actions">
+          <div class="hero-cta-group">
             <a class="btn btn-primary" href="cardapio.html">Ver cardápio</a>
-            <a class="btn btn-secondary" href="galeria.html">Ver galeria</a>
+            <a class="btn btn-secondary" href="contato.html">Fazer pedido</a>
           </div>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <strong>Pedidos rápidos</strong>
-              <p>Botões diretos para WhatsApp em cada sabor.</p>
+          <div class="mini-stats">
+            <article>
+              <strong>Visual premium</strong>
+              <span>Paleta elegante, layout refinado e mais presença de marca.</span>
+            </article>
+            <article>
+              <strong>Mais conversão</strong>
+              <span>Botões objetivos para o cliente sair do interesse para o pedido.</span>
+            </article>
+            <article>
+              <strong>Experiência clara</strong>
+              <span>Navegação simples, páginas organizadas e conteúdo melhor distribuído.</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-frame">
+            <img src="hero/boas-vindas-principal.jpg" alt="Produto da Husky Confeiteiro em destaque" />
+            <div class="floating-panel floating-panel-top">
+              <span class="panel-kicker">Destaque da marca</span>
+              <strong>Lambe-Lambe de Brigadeiro</strong>
+              <p>Apresentação irresistível, textura cremosa e visual que vende.</p>
             </div>
-            <div class="stat-card">
-              <strong>Visual da marca</strong>
-              <p>Identidade azul, bege e detalhes inspirados no husky.</p>
-            </div>
-            <div class="stat-card">
-              <strong>Navegação simples</strong>
-              <p>Cada parte do site em uma página separada.</p>
+            <div class="floating-panel floating-panel-bottom">
+              <span class="rating-pill">★ Marca autoral</span>
+              <span class="rating-pill">WhatsApp direto</span>
+              <span class="rating-pill">Instagram forte</span>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="showcase">
-          <img src="hero/boas-vindas-principal.jpg" alt="Destaque da Husky Confeiteiro" />
-          <div class="showcase-content">
-            <div class="badge">🍫 Destaque da casa</div>
-            <h2>Sabores autorais com cara de presente.</h2>
-            <p>
-              Apresentação bonita, pegada artesanal e experiência pensada para surpreender no sabor e na entrega.
-            </p>
-            <div class="pill-list">
-              <span>Lambe-Lambe</span>
-              <span>Uivo do Prestígio</span>
-              <span>Abana-Rabo</span>
-            </div>
-          </div>
+    <section class="container section-spacing reveal">
+      <div class="section-header left-limit">
+        <span class="eyebrow">por que esse site ficou mais forte</span>
+        <h2>O visual agora conversa com a qualidade da marca.</h2>
+        <p>Eu reestruturei a vitrine digital para passar mais confiança, desejo e profissionalismo desde a primeira visita.</p>
+      </div>
+
+      <div class="value-grid">
+        <article class="soft-card icon-card">
+          <div class="icon-bubble">✦</div>
+          <h3>Primeira impressão melhor</h3>
+          <p>Hero mais sofisticado, tipografia mais bonita e acabamento com cara de site de marca premium.</p>
+        </article>
+        <article class="soft-card icon-card">
+          <div class="icon-bubble">🧁</div>
+          <h3>Produtos mais valorizados</h3>
+          <p>Os sabores aparecem como protagonistas, com destaque visual, argumentos de venda e acesso rápido ao pedido.</p>
+        </article>
+        <article class="soft-card icon-card">
+          <div class="icon-bubble">📱</div>
+          <h3>Contato mais funcional</h3>
+          <p>O formulário agora ajuda a montar a mensagem e deixa o cliente mais perto de fechar a compra.</p>
+        </article>
+        <article class="soft-card icon-card">
+          <div class="icon-bubble">📸</div>
+          <h3>Galeria com impacto</h3>
+          <p>As fotos ganharam mais espaço, hierarquia e experiência visual para encantar antes mesmo do pedido.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="split-section glass-panel">
+        <div>
+          <span class="eyebrow">sabores em evidência</span>
+          <h2>Os queridinhos da casa já entram vendendo.</h2>
+          <p class="section-text">Os produtos receberam uma apresentação mais forte, com texto mais vendedor e foco no que ajuda o cliente a escolher rápido.</p>
         </div>
-      </section>
+        <a class="btn btn-secondary" href="cardapio.html">Abrir cardápio completo</a>
+      </div>
 
-      <section class="quick-grid featured-products">
-        <article class="feature-card">
-          <div class="feature-icon">🧁</div>
-          <strong>Cardápio objetivo</strong>
-          <p>Somente os sabores e informações que ajudam o cliente a decidir e pedir.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📸</div>
-          <strong>Galeria separada</strong>
-          <p>Fotos organizadas para valorizar os produtos, bastidores e identidade da marca.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📱</div>
-          <strong>Instagram em destaque</strong>
-          <p>Uma aba dedicada para levar o cliente direto ao perfil @huskyconfeiteiro.</p>
-        </article>
-      </section>
-
-      <section class="glass-card window" style="margin-top: 24px;">
-        <div class="two-col">
-          <div class="copy-block">
-            <div class="section-title" style="margin-bottom:0;">
-              <div class="eyebrow">Sobre a Husky</div>
-              <h2>Uma confeitaria com identidade própria.</h2>
-              <p>
-                Na Husky Confeiteiro, cada doce é pensado para ser gostoso, bonito e memorável.
-                A marca mistura visual marcante, apresentação caprichada e sabores que funcionam muito bem tanto para venda do dia a dia quanto para encomendas.
-              </p>
+      <div class="featured-grid">
+        <article class="product-spot soft-card">
+          <div class="product-spot-image"><img src="produtos/lambe-lambe.jpg" alt="Lambe-Lambe de Brigadeiro" /></div>
+          <div class="product-spot-content">
+            <span class="product-chip">mais pedido</span>
+            <h3>Lambe-Lambe de Brigadeiro</h3>
+            <p>Chocolate intenso, recheio generoso e aquele visual que chama atenção no feed e na vitrine.</p>
+            <div class="product-spot-footer">
+              <strong>R$ 18,00</strong>
+              <a href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Lambe-Lambe%20de%20Brigadeiro%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
             </div>
           </div>
+        </article>
 
-          <div class="info-grid">
-            <div class="info-card">
-              <strong>Pedidos</strong>
-              <p>Atendimento rápido pelo WhatsApp para facilitar orçamento e fechamento.</p>
-            </div>
-            <div class="info-card">
-              <strong>Instagram</strong>
-              <p>Conteúdo visual para fortalecer a marca e mostrar novidades.</p>
-            </div>
-            <div class="info-card">
-              <strong>Encomendas</strong>
-              <p>Atendimento para datas especiais, kits e pedidos personalizados.</p>
-            </div>
-            <div class="info-card">
-              <strong>Apresentação</strong>
-              <p>Fotos fortes, estilo fofo e acabamento pensado para chamar atenção.</p>
+        <article class="product-spot soft-card">
+          <div class="product-spot-image"><img src="produtos/uivo-prestigio.jpg" alt="Uivo do Prestígio" /></div>
+          <div class="product-spot-content">
+            <span class="product-chip">clássico da casa</span>
+            <h3>Uivo do Prestígio</h3>
+            <p>Chocolate com coco cremoso em camadas marcantes para quem ama um sabor mais memorável.</p>
+            <div class="product-spot-footer">
+              <strong>R$ 18,00</strong>
+              <a href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Uivo%20do%20Prestígio%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
             </div>
           </div>
+        </article>
+
+        <article class="product-spot soft-card">
+          <div class="product-spot-image"><img src="produtos/pata-crocante.jpg" alt="Pata Crocante" /></div>
+          <div class="product-spot-content">
+            <span class="product-chip">queridinho do insta</span>
+            <h3>Pata Crocante</h3>
+            <p>Uma combinação cremosa e crocante com cara de doce especial e ótimo apelo visual.</p>
+            <div class="product-spot-footer">
+              <strong>R$ 18,00</strong>
+              <a href="https://wa.me/5511988456865?text=Olá%2C%20quero%20pedir%20um%20Pata%20Crocante%20da%20Husky%20Confeiteiro." target="_blank" rel="noreferrer">Pedir</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="brand-story-grid">
+        <article class="story-panel glass-panel">
+          <span class="eyebrow">identidade de marca</span>
+          <h2>Fofo, elegante, autoral e fácil de lembrar.</h2>
+          <p>
+            O site reforça a personalidade da Husky Confeiteiro com uma combinação de delicadeza, presença visual e acabamento profissional.
+            Isso ajuda o cliente a perceber valor antes mesmo de provar.
+          </p>
+          <ul class="check-list">
+            <li>Paleta azul, creme e chocolate com mais sofisticação</li>
+            <li>Layout mais limpo e mais forte para envio aos clientes</li>
+            <li>Tom de marca mais encantador e mais confiante</li>
+          </ul>
+        </article>
+
+        <article class="story-image-card">
+          <img src="galeria/mascote-identidade.jpg" alt="Mascote da Husky Confeiteiro" />
+          <div class="story-image-card__content">
+            <span class="eyebrow-chip">mascote e identidade</span>
+            <h3>Uma marca que fica na memória.</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="section-header center-limit">
+        <span class="eyebrow">como o cliente navega</span>
+        <h2>Menos atrito, mais desejo e mais clareza.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="soft-card process-card">
+          <span class="process-number">01</span>
+          <h3>Entra e entende rápido</h3>
+          <p>O topo mostra a proposta da marca e já leva para o cardápio ou para o pedido.</p>
+        </article>
+        <article class="soft-card process-card">
+          <span class="process-number">02</span>
+          <h3>Escolhe pelo visual</h3>
+          <p>As fotos dos sabores e a galeria deixam o site muito mais sedutor e convincente.</p>
+        </article>
+        <article class="soft-card process-card">
+          <span class="process-number">03</span>
+          <h3>Vai para o WhatsApp</h3>
+          <p>O cliente encontra o contato com rapidez e já consegue mandar uma mensagem objetiva.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section-spacing reveal">
+      <div class="cta-banner">
+        <div>
+          <span class="eyebrow">pronto para apresentar sua marca</span>
+          <h2>Agora o seu site já tem presença para ser enviado aos clientes.</h2>
+          <p>Você pode usar como vitrine oficial, mandar o link no Instagram e compartilhar no WhatsApp com muito mais confiança.</p>
         </div>
-      </section>
-    </div>
+        <div class="cta-banner__actions">
+          <a class="btn btn-primary" href="contato.html">Ir para contato</a>
+          <a class="btn btn-secondary" href="instagram.html">Ver Instagram</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="container glass-card footer-inner">
-      <div class="footer-brand">
-        <strong>Husky Confeiteiro</strong>
-        <span>Mais fofo que eu? Só meu bolo de pote.</span>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <div class="footer-title">Husky Confeiteiro</div>
+        <p class="footer-text">Um site com presença de marca, visual premium e caminho direto para o cliente fechar pedido.</p>
       </div>
-      <div class="footer-nav">
+      <div class="footer-links">
+        <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
         <a href="galeria.html">Galeria</a>
         <a href="instagram.html">Instagram</a>
